@@ -23,6 +23,20 @@ func generateLotto() -> [Int] {
     return Array(numberDrawn)
 }
 
+func numberGenerator(size: Int, using generator: () -> Int) -> [Int] {
+    var numbers = [Int]()
+    
+    for _ in 0...size {
+        let newNumber = generator()
+        numbers.append(newNumber)
+    }
+    return numbers
+}
+
+let lottoRolls = numberGenerator(size: 5) {
+    Int.random(in: 1...45)
+}
+
 func playLotto(rounds: Int) {
     for round in 1...rounds {
         let numberDrawn = generateLotto()
