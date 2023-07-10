@@ -7,5 +7,4 @@
 
 import Foundation
 
-lottoGenerator()
-lottoChecker()
+playLotto(rounds: 10)

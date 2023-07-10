@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		BD1611BF2A55382B00F0A5EE /* 2주차 재복습 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "2주차 재복습"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1611C22A55382B00F0A5EE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		BD1611C92A55384400F0A5EE /* LottoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoGenerator.swift; sourceTree = "<group>"; };
+		BD1611C92A55384400F0A5EE /* LottoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoGenerator.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
