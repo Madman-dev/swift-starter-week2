@@ -7,4 +7,10 @@
 
 import Foundation
 
-playLotto(rounds: 10)
+playLotto(rounds: 3)
+findPreviousWinners(round: 2)
+
+
+//let generator = LottoNumberGenerator()
+//let randomNumber = generator.generateNumber()
+//print("RandomNumber is", randomNumber)

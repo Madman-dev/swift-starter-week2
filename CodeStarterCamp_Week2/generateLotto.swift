@@ -23,16 +23,6 @@ func generateLotto() -> [Int] {
     return Array(numberDrawn)
 }
 
-//func numberGenerator(size: Int, using generator: () -> Int) -> [Int] {
-//    var numbers = [Int]()
-//
-//    for _ in 0...size {
-//        let newNumber = generator()
-//        numbers.append(newNumber)
-//    }
-//    return numbers
-//}
-
 func playLotto(rounds: Int) {
     for round in 1...rounds {
         let numberDrawn = generateLotto()
@@ -44,17 +34,27 @@ func saveWinners(won rounds: Int, with draws:[Int]) {
     savedWinners["\(rounds)"] = draws
 }
 
-//func printAllWinners() {
-//    let sortedWinners = savedWinners.sorted(by: {$0.key < $1.key})
-//    for (key, value) in sortedWinners {
-//        let sortedValue = value.map{String($0)}.joined(separator: ", ")
-//        print("\(key)회차의 로또 당첨 번호는 \(sortedValue)입니다.")
-//    }
-//}
+func printAllWinners() {
+    let sortedWinners = savedWinners.sorted(by: {$0.key < $1.key})
+    for (key, value) in sortedWinners {
+        let sortedValue = value.map{String($0)}.joined(separator: ", ")
+        print("\(key)회차의 로또 당첨 번호는 \(sortedValue)입니다.")
+    }
+}
+
+func findWinner(round: Int) {
+    if let roundNumber = savedWinners["\(round)"] {
+        let numberDrawn = roundNumber.map{String($0)}.joined(separator: ", ")
+        print("\(round)회차의 로또 당첨 번호는 \(numberDrawn)입니다.")
+    }
+}
+
+//func numberGenerator(size: Int, using generator: () -> Int) -> [Int] {
+//    var numbers = [Int]()
 //
-//func findWinner(round: Int) {
-//    if let roundNumber = savedWinners["\(round)"] {
-//        let numberDrawn = roundNumber.map{String($0)}.joined(separator: ", ")
-//        print("\(round)회차의 로또 당첨 번호는 \(numberDrawn)입니다.")
+//    for _ in 0...size {
+//        let newNumber = generator()
+//        numbers.append(newNumber)
 //    }
+//    return numbers
 //}
